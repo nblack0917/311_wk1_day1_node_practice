@@ -1,16 +1,27 @@
 const split = (str, delim) => {
-  // write code for strings.split
-
+  return str.split(delim);
 }
 
 const pairs = (str) => {
-  // write code for strings.pairs
-
+  let pairArr = [];
+  for(let i = 0; i<str.length; i = i + 2) {
+    let strSlice = str.slice(i, i+2)
+    // console.log(strSlice)
+    pairArr.push(strSlice)
+    // console.log([pairArr)
+  };
+  // console.log(pairArr)
+  return pairArr;
 }
 
 const reverse = (str) => {
-  // write code for strings.reverse
-
+  let splitStr = str.split('');
+  // console.log(splitStr)
+  splitStr.reverse();
+  // console.log(splitStr)
+  let newStr = splitStr.join('');
+  // console.log(newStr)
+  return newStr;
 }
 
 module.exports = {
@@ -18,3 +29,6 @@ module.exports = {
   pairs,
   reverse
 }
+
+// pairs('abcdefghijklmnop')
+// reverse('a blue dog')
